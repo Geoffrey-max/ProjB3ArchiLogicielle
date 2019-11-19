@@ -85,5 +85,5 @@ INSERT INTO geneworld.historique (score,
 VALUES (1542,
 		now(),
 		1
-	   );m
+	   );
 SELECT * FROM geneworld.historique;
