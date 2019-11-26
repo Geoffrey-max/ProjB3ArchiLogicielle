@@ -1,3 +1,8 @@
+DROP   TABLE  IF EXISTS geneworld.obstacles;
+DROP   TABLE  IF EXISTS geneworld.historique;
+DROP   TABLE  IF EXISTS geneworld.users;
+DROP   TABLE  IF EXISTS geneworld.vagues;
+
 CREATE SCHEMA IF NOT EXISTS geneWorld;
 
 CREATE TABLE IF NOT EXISTS geneworld.users
@@ -74,7 +79,7 @@ CREATE TABLE IF NOT EXISTS geneworld.historique (
 	id SERIAL PRIMARY KEY,
 	score FLOAT NOT NULL,
 	datepassage DATE NOT NULL,
-	id_joueurs INT REFERENCES geneworld.users(id) NOT NULL
+	id_joueurs INT REFERENCES geneworld.users(id) ON DELETE CASCADE NOT NULL
 );
 
 
