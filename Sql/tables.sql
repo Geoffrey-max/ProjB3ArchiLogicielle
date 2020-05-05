@@ -4,19 +4,6 @@ DROP   TABLE  IF EXISTS geneworld.users;
 DROP   TABLE  IF EXISTS geneworld.vagues;
 
 CREATE SCHEMA IF NOT EXISTS geneWorld;
-
-CREATE TABLE IF NOT EXISTS geneworld.users
-(
-    id SERIAL PRIMARY KEY,
-    FIRSTNAME VARCHAR(255),
-    LASTNAME VARCHAR(255),
-    PASSWORD VARCHAR(255)
-);
-
-
-
-INSERT INTO geneworld.users (firstName, lastName, password) VALUES ('leo','rig', crypt('lala', gen_salt('bf')));
-SELECT * FROM geneworld.users;
 																										
 CREATE TABLE IF NOT EXISTS geneworld.obstacles
 (
@@ -79,7 +66,7 @@ CREATE TABLE IF NOT EXISTS geneworld.historique (
 	id SERIAL PRIMARY KEY,
 	score FLOAT NOT NULL,
 	datepassage DATE NOT NULL,
-	id_joueurs INT REFERENCES geneworld.users(id) ON DELETE CASCADE NOT NULL
+	id_joueurs VARCHAR(255)
 );
 
 
