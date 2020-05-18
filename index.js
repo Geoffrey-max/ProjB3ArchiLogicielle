@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const { getHistorique, addHistorique, getHistoriqueBYID, deleteHistorique, getHistoriqueDESC } = require("./functions/historique/REST")
-const { getObstacle, addObstacle, getObstacleBYID, deleteObstacle, upadteObstacle } = require("./functions/obstacle/REST")
+const { getObstacle, addObstacle, getObstacleBYID, deleteObstacle, upadteObstacle ,getObstacleBYNAME} = require("./functions/obstacle/REST")
 const { getUser, addUser, getUserBYID, deleteUser, upadteUser } = require("./functions/users/REST")
 const { getVague, addVague, getVagueBYID, deleteVague, upadteVague } = require("./functions/vagues/REST")
 const app = express();
@@ -60,6 +60,6 @@ app
 
 
 // Start server
-app.listen(process.env.PORT || 3002, () => {
-  console.log(`Server listening`, process.env.PORT || 3002);
+app.listen(process.env.PORT || 3088, () => {
+  console.log(`Server listening`, process.env.PORT || 3088);
 });
