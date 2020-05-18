@@ -28,6 +28,21 @@ const getObstacleBYID = (request, response) => {
     }
   });
 };
+const getObstacleBYNAME = (request, response) => {
+  const { map } = request.params;
+  pool.query("SELECT * FROM geneworld.obstacles WHERE mapname = $1", [map], (error, results) => {
+    if (error) {
+      console.log(error);
+      response.status(404)
+    } else {
+      if (results.rows[0]) {
+        response.status(200).json(results.rows[0]);
+      }else{
+        response.status(404).json({ status: "unsuccess", message: "Obstacle Not Found." });
+      }
+    }
+  });
+};
 
 const addObstacle = (request, response) => {
   var nameNotUse = true;
@@ -114,4 +129,4 @@ const upadteObstacle = (request, response) => {
 
 };
 
-module.exports = { getObstacle, getObstacleBYID, addObstacle, deleteObstacle, upadteObstacle }
+module.exports = { getObstacle, getObstacleBYID, addObstacle, deleteObstacle, upadteObstacle, getObstacleBYNAME }

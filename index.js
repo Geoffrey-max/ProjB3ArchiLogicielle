@@ -31,7 +31,10 @@ app
   .get(getObstacleBYID)
   .delete(deleteObstacle)
   .put(upadteObstacle)
-
+app
+  .route("/obstaclesbymap/:map")
+  .get(getObstacleBYNAME)
+  
 app
   .route("/vagues")
   .get(getVague)
