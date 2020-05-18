@@ -44,7 +44,19 @@ INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, pos
 	VALUES (11, 'prairie', false, null, 'tree', 'invisible', 290, 184, 40, 40);	
 INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
 	VALUES (12, 'prairie', true, 'slow', 'marre', 'invisible', 180, 105, 110, 80);		
-
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (14, 'ocean', true, null, 'water', 'invisible', 0, 208,480,80);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)	
+	VALUES (15, 'ocean', false, null, 'wall', 'invisible', 0, 0, 28, 175);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (16, 'ocean', false, null, 'wall', 'invisible', 268, 0, 50, 120);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (17, 'ocean', false, null, 'wall', 'invisible', 300, 75, 85, 40);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (18, 'ocean', false, null, 'wall', 'invisible', 430, 0, 80, 76);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (19, 'ocean', false, null, 'wall', 'invisible', 448, 124, 50, 50);
+	
 SELECT * FROM geneworld.obstacles;
 
 																								
