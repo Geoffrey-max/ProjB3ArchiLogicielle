@@ -18,18 +18,16 @@ CREATE TABLE IF NOT EXISTS geneworld.obstacles
 	HEIGHT INT NOT NULL
 );
 
-INSERT INTO geneworld.obstacles(
-	id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
 	VALUES (1, 'dungeons', false, null, 'wall', 'invisible', 0, 0, 43, 270);
-INSERT INTO geneworld.obstacles(
-	id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)	
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)	
 	VALUES (2, 'dungeons', false, null, 'wall', 'invisible', 0, 0, 480, 43);
-	INSERT INTO geneworld.obstacles(
-	id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
-	VALUES (2, 'dungeons', false, null, 'wall', 'invisible', 460, 0, 43, 270);
-	INSERT INTO geneworld.obstacles(
-	id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
-	VALUES (2, 'dungeons', false, null, 'wall', 'invisible', 0, 250, 480, 43);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (3, 'dungeons', false, null, 'wall', 'invisible', 460, 0, 43, 270);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (4, 'dungeons', false, null, 'wall', 'invisible', 0, 250, 480, 43);
+INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, positionx, positiony, width, height)
+	VALUES (5, 'dungeons', true, 'slow', 'grille', 'invisible', 200, 110, 100, 70);
 	
 SELECT * FROM geneworld.obstacles;
 
