@@ -42,7 +42,7 @@ const addObstacle = (request, response) => {
       }
     })
     if (nameNotUse) {
-      pool.query("INSERT INTO geneworld.obstacles(traversable, effect, nom, type, positionx, positiony, width, height) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);", [traversable, effect, nom, type, positionx, positiony, width, height], error => {
+      pool.query("INSERT INTO geneworld.obstacles(mapname,traversable, effect, nom, type, positionx, positiony, width, height) VALUES ($1, $2, $3, $4, $5, $6, $7, $8,$9);", [mapname, traversable, effect, nom, type, positionx, positiony, width, height], error => {
         if (error) {
           console.log(error);
           response.status(404)
