@@ -35,8 +35,8 @@ const getObstacleBYNAME = (request, response) => {
       console.log(error);
       response.status(404)
     } else {
-      if (results.rows[0]) {
-        response.status(200).json(results.rows[0]);
+      if (results.rows) {
+        response.status(200).json(results.rows);
       }else{
         response.status(404).json({ status: "unsuccess", message: "Obstacle Not Found." });
       }
