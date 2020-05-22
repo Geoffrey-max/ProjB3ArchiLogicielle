@@ -12,7 +12,7 @@ const getHistorique = (request, response) => {
     });
 };
 const getHistoriqueDESC = (request, response) => {
-    pool.query("SELECT * FROM geneworld.historique ORDER BY score DESC", (error, results) => {
+    pool.query("SELECT * FROM geneworld.historique ORDER BY score DESC LIMIT 5", (error, results) => {
         if (error) {
             console.log(error);
             response.status(404)
