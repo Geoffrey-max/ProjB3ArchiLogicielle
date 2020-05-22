@@ -61,29 +61,126 @@ INSERT INTO geneworld.obstacles(id, mapname, traversable, effect, nom, type, pos
 SELECT * FROM geneworld.obstacles;
 
 																								
-CREATE TABLE IF NOT EXISTS geneworld.vagues
-(
-	id SERIAL PRIMARY KEY,
-	NBR INT NOT NULL,
-	ZONE_AGGRO FLOAT NOT NULL,
-	VITESSE FLOAT NOT NULL,
-	TEMPS_BTW_APPARISSION FLOAT NOT NULL,
-	AUTRE VARCHAR(255)
-);
+CREATE TABLE IF NOT EXISTS geneworld.vagues 
+  ( 
+     id      SERIAL PRIMARY KEY, 
+     nbr     INT NOT NULL, 
+     mini    INT NOT NULL, 
+     maxi    INT NOT NULL, 
+     life    INT NOT NULL, 
+     vitesse FLOAT NOT NULL, 
+     autre   VARCHAR(255) 
+  ); 
 
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (1, 
+             30, 
+             60, 
+             1, 
+             1 ); 
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (5, 
+             30, 
+             60, 
+             1, 
+             1 ); 
 
-INSERT INTO geneworld.vagues (NBR, 
-							 ZONE_AGGRO, 
-							 VITESSE,
-							 TEMPS_BTW_APPARISSION
-							 ) 
-VALUES (5,
-		30,
-		1,
-		2.2
-	   );
-SELECT * FROM geneworld.vagues;
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (2, 
+             10, 
+             15, 
+             4, 
+             1 ); 
 
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (2, 
+             120, 
+             130, 
+             8, 
+             1 ); 
+
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (4, 
+             30, 
+             60, 
+             4, 
+             1 ); 
+
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (1, 
+             30, 
+             60, 
+             1, 
+             2 ); 
+
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (5, 
+             30, 
+             60, 
+             3, 
+             1 ); 
+
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (6, 
+             30, 
+             60, 
+             3, 
+             1 ); 
+
+INSERT INTO geneworld.vagues 
+            (nbr, 
+             mini, 
+             maxi, 
+             life, 
+             vitesse) 
+VALUES      (20, 
+             30, 
+             60, 
+             3, 
+             3 ); 
+
+SELECT * 
+FROM   geneworld.vagues; 
 CREATE TABLE IF NOT EXISTS geneworld.historique (
 	id SERIAL PRIMARY KEY,
 	score FLOAT NOT NULL,
